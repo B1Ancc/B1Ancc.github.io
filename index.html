@@ -1,61 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head> 
-    <title>My Resume</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV: Tran Quang Anh</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
 
-  <body>
-    <h1>Tran Quang Anh's portfolio (v0.11)</h1>
-    <strong>Index</strong>
-    <a href="./public/hobby.html">My Hobbies</a>
-    <a href="./public/contact.html">Contact Me!</a> 
-    <br />
+        ol,
+        ul {
+            margin-block-start: 0.25em;
+            margin-block-end: 0.25em;
+            margin-inline-start: 10px;
+            margin-inline-end: 10px;
+            padding-inline-start: 20px;
+        }
 
-    <img src="./assets/images/avatar.png" height="200px" alt="My avatar">
-    <br />
+        /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
-    <h2>About Me</h2>
-    <p>A front-end fresher trying to learn step-by-step.</p>
+        body {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.5715;
+            color: rgba(0, 0, 0, .75);
+            text-align: center;
+            background-color: #efeff3;
+            background-image: url('./img/noise.png');
+        }
 
-    <hr />
+        label {
+            font-weight: bold;
+        }
 
-    <h2>Education</h2>
-    <strong>Electric Power University (EPU)</strong>
-    <ul>
-        <li><strong>Years of education:</strong> 2021 - Now</li>
-        <li><strong>Major:</strong> IT</li>
-    </ul>
+        h2 {
+            font-weight: bold;
+            color: #0091d8;
+            font-variant: small-caps;
+            border-bottom: 1px dashed #007fca;
+            -webkit-margin-after: 0.6em;
+            margin-block-end: 0.6em;
+        }
 
-    <hr />
+        h3 {
+            display: inline-block;
+            font-weight: normal;
+            color: #47acde;
+            -webkit-margin-before: 0.2em;
+            margin-block-start: 0.2em;
+            -webkit-margin-end: 0.15em;
+            margin-block-end: 0.15em;
+        }
 
-    <h2>Work Experience</h2>
-    <h3>Jobs that are relevant to my major</h3>
-    <ul>
-        <li>To be added.</li>
-    </ul>
+        h4 {
+            display: inline-block;
+            font-weight: normal;
+            color: #2d8bd8;
+            -webkit-margin-before: 0.1em;
+            margin-block-start: 0.1em;
+            -webkit-margin-end: 0.1em;
+            margin-block-end: 0.1em;
+        }
 
-    <h3>My side jobs</h3>
-    <strong><a href="https://www.facebook.com/DayDreams648">Day Dreams</a></strong>
-    <ul>
-        <li><strong>Active years:</strong> 2021 - Now</li>
-        <li><strong>Roles:</strong> Content Creator/Translator</li>
-    </ul>
+        p {
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: 10px;
+            margin-inline-end: 10px;
+        }
 
-    <hr />
+        .truncate {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
 
-    <h2>Skills</h2>
-    <h3>Front-End</h3>
-    <ul>
-        <li><strong>HTML, CSS, JS:</strong> I'm currently learning.</li>
-    </ul>
-    <h3>Designing</h3>
-    <ul>
-        <li><strong>Adobe Photoshop:</strong> I can use Adobe Photoshop at basic level.</li>
-    </ul>
-  </body>
+        .container {
+            display: inline-flex;
+            -webkit-column-gap: 1rem;
+            -moz-column-gap: 1rem;
+            column-gap: 1rem;
+            max-width: 1000px;
+            width: 90%;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 1px #848484;
+            background-color: #fefefe;
+            border: 1px solid darkgray;
+            background-image: url('./img/texture.png');
+        }
 
-  <footer>
-    Copyright © 2024 Tran Quang Anh. All Rights Reserved.
-  </footer>
+        .avatar {
+            width: 100%;
+            padding: 10px;
+            max-height: 300px;
+            max-width: 300px;
+        }
+
+        .side-section {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            text-align: left;
+        }
+
+        .main-section {
+            -webkit-box-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+            text-align: left;
+        }
+
+        .map-box {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+        }
+
+        .map-box>* {
+            min-width: 0;
+        }
+
+        .map-box label {
+            color: #686868;
+        }
+
+        .map-box label:after {
+            content: ":";
+        }
+
+        .map-box>div {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .period {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .period>* {
+            min-width: 0;
+        }
+
+        .period time {
+            font-size: 0.8rem;
+            color: #8a8a8a;
+            margin-bottom: 0.25rem;
+        }
+
+        ul.short-list {
+            list-style-type: circle;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+        }
+
+        ul.short-list p {
+            margin: 0;
+        }
+
+        .list-label {
+            display: inline-block;
+            width: 6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="side-section">
+            <div>
+                <div style="text-align: center;">
+                    <img class="avatar" src=".assets/images/avatar.png" />
+                </div>
+                <summary>
+                    <div class="map-box">
+                        <label>Date of Birth</label>
+                        <div>November 21th, 2003</div>
+                        <label>Gender</label>
+                        <div>Male</div>
+                        <label>Email</label>
+                        <div>
+                            <a href="mailto:quanganhtrn16@yahoo.com">quanganhtrn16@yahoo.com</a>
+                        </div>
+                        <label>Mobile</label>
+                        <div>+84947596226</div>
+                    </div>
+                </summary>
+                <summary>
+                    <h2>
+                        Related Links
+                    </h2>
+                    <ul class="short-list">
+                        <li>
+                            <p>
+                                <b>My Github</b><br />
+                                <a href="https://github.com/b1ancc">https://github.com/b1ancc</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>My LinkedIn</b><br />
+                                <a href="https://www.linkedin.com/in/b1ancc/">https://www.linkedin.com/in/b1ancc/</a>
+                            </p>
+                        </li>
+                    </ul>
+                </summary>
+                <summary>
+                    <h2>
+                        Education
+                    </h2>
+                    <div class="period">
+                        <strong><a href="https://epu.edu.vn/">Electric Power University</a></strong>
+                        <time>October 2021 - Now</time>
+                    </div>
+                    <p>
+                        <b>Major</b>: IT<br />
+                        <b>Graduation</b>: TBA<br />
+                        <b>GPA</b>: TBA<br />
+                    </p>
+                </summary>
+                <summary>
+                    <h2>
+                        Work Experience
+                    </h2>
+                    <h3>
+                        Main Jobs
+                    </h3>
+                    <div class="period">
+                        <strong>I currently have no work expriences in my major's field. But I'm willing to learn now and in the future.</strong>
+                    </div>
+                    <h3>
+                        Side Jobs
+                    </h3>
+                    <div class="period">
+                        <strong><a href="https://www.facebook.com/DayDreams648">Day Dreams</a></strong>
+                        <time>October 2021 - Now</time>
+                    </div>
+                    <p>
+                        Role: Content Creator, Translator
+                    </p>
+                </summary>
+            </div>
+        </section>
+        <section class="main-section">
+            <article>
+                <h2>
+                    About myself
+                </h2>
+                <p>
+                    One who craves for knowledge, but struggles with self-learning due to ADHD. Learning web development for the good.
+                </p>
+            </article>
+            <article>
+                <h2>
+                    Skills & Certifications
+                </h2>
+                <h3>Front-End</h4>
+                <ul>
+                    <li><b>HTML, CSS, JS</b>: I'm still learning.</li>
+                </ul>
+                <h3>Linguistic</h3>
+                <ul>
+                    <li><b>English</b>: I can do basic writing and reading. I want to learn English at more advanced level after graduation.</li>
+                    <li><b>Japanese</b>: Currently learning at the most basic level (N5).</li>
+                </ul>
+                <h3>Miscellaneous</h3>
+                <ul>
+                    <li><b>Photoshop</b>: I can also do some basic Photoshop for the needs.</li>
+                </ul>
+            </article>
+            <article>
+                <h2>
+                    Projects
+                </h2>
+                <article>
+                    <h3>
+                        Work Projects
+                    </h3>
+                    <p>
+                        <h4>To be added.</h4>
+                    </p>
+                </article>
+                <article>
+                    <h3>
+                        Personal Projects
+                    </h3>
+                    <ul>
+                        <li>
+                            Questionnaire Manager: A questionnaire manager that I and my friends made for the midterm assignment. 
+                            <ul>
+                                <li>
+                                    <b class="list-label">Repo</b>: <a href="https://github.com/B1Ancc/TracNghiem" target="_blank" rel="nofollower noreferrer">
+                                    https://github.com/B1Ancc/TracNghiem
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </article>
+        </section>
+    </div>
+</body>
+
 </html>
