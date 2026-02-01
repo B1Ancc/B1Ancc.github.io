@@ -7,6 +7,7 @@
     <title>CV: Tran Quang Anh</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -21,13 +22,6 @@
             padding-inline-start: 20px;
         }
 
-        /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
         body {
             font-family: Roboto, sans-serif;
             font-size: 16px;
@@ -40,6 +34,12 @@
 
         label {
             font-weight: bold;
+        }
+
+        h1 {
+            font-variant: small-caps;
+            -webkit-margin-after: 0.8em;
+            margin-block-end: 0.2em;
         }
 
         h2 {
@@ -71,12 +71,12 @@
             margin-block-end: 0.1em;
         }
 
-        p {
+        /* p {
             margin-block-start: 0.5em;
             margin-block-end: 0.5em;
             margin-inline-start: 10px;
             margin-inline-end: 10px;
-        }
+        } */
 
         .truncate {
             white-space: nowrap;
@@ -146,8 +146,9 @@
         }
 
         .period {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
 
         .period>* {
@@ -155,8 +156,23 @@
         }
 
         .period time {
-            font-size: 0.8rem;
-            color: #8a8a8a;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .location {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .location >* {
+            min-width: 0;
+        }
+
+        .location address {
+            font-style: normal;
+            font-size: 0.9rem;
             margin-bottom: 0.25rem;
         }
 
@@ -174,144 +190,159 @@
             display: inline-block;
             width: 6rem;
         }
+
+        i.fa {
+            margin-right: 0.2em;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .language {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .language.rating-label {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .related {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .skills-list {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <section class="side-section">
+        <section class="main-section">
             <div>
-                <div style="text-align: center;">
-                    <img class="avatar" src="./assets/images/Avatar.png" />
-                </div>
                 <summary>
-                    <div class="map-box">
-                        <label>Date of Birth</label>
-                        <div>November 21th, 2003</div>
-                        <label>Gender</label>
-                        <div>Male</div>
-                        <label>Email</label>
-                        <div>
+                    <h1>TRAN QUANG ANH</h1>
+                <div class="information">
+                        <span class="related">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
                             <a href="mailto:quanganhtrn16@yahoo.com">quanganhtrn16@yahoo.com</a>
-                        </div>
-                        <label>Mobile</label>
-                        <div>+84947596226</div>
-                    </div>
+                        </span>
+                        <span class="related">
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                            <a href="https://github.com/b1ancc" target="_blank">github.com/b1ancc</a>
+                        </span>
+                        <span class="related">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Hanoi, Vietnam</span>
+                        </span>
+                </div>
                 </summary>
-                <summary>
-                    <h2>
-                        Related Links
-                    </h2>
-                    <ul class="short-list">
-                        <li>
-                            <p>
-                                <b>My Github</b><br />
-                                <a href="https://github.com/b1ancc">https://github.com/b1ancc</a>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <b>My LinkedIn</b><br />
-                                <a href="https://www.linkedin.com/in/b1ancc/">https://www.linkedin.com/in/b1ancc/</a>
-                            </p>
-                        </li>
-                    </ul>
-                </summary>
+                <h2>
+                    Summary
+                </h2>
+                <p>
+                    Software engineering student seeking opportunities to grow as a developer. Best learner in structured environments with clear guidance and mentorship.
+                </p>
                 <summary>
                     <h2>
                         Education
                     </h2>
-                    <h3>
-                        Academic
-                    </h3>
                     <div class="period">
-                        <strong><a href="https://epu.edu.vn/">Electric Power University</a></strong>
+                        <strong>Software Engineering</strong>
                         <time>October 2021 - Now</time>
                     </div>
-                    <p>
-                        <b>Major</b>: IT<br />
-                        <b>GPA (as of June 2025)</b>: 3.01 / 4.00<br />
-                    </p>
-                    <!-- <h3>
-                        Self-Learning
-                    </h3>
-                    <div class="period">
-                        <strong><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete Web Development Bootcamp (Udemy)</a></strong>
-                        <time>2024 - Now</time>
-                    </div> -->
+                    <div class="location">
+                        <strong><a href="https://epu.edu.vn/" target="_blank">Electric Power University</a></strong>
+                        <address>Hanoi</address>
+                    </div>
                 </summary>
                 <summary>
                     <h2>
-                        Work Experience
-                    </h2>   
-                    <h3>
-                        Main Jobs
-                    </h3>
+                        Experience
+                    </h2>  
                     <div class="period">
-                        <strong><a href="https://www.linkedin.com/company/tapita-io/">Tapita</a></strong>
-                        <time>February 2025 - </time>
-                        <strong>Roles:</strong>
+                        <strong>Intern</strong>
+                        <time>February 2025 - December 2025</time>
+                    </div>
+                    <div class="location">
+                        <strong><a href="https://www.linkedin.com/company/tapita-io/" target="_blank">Tapita</a></strong>
+                        <address>Hanoi</address>
                     </div>
                     <p>
                         <ul>
-                            <li><strong>Intern</strong>: Learning React and Shopify from scratches!</li>
-                        </ul>
-                    </p>
-                    <h3>
-                        Side Jobs
-                    </h3>
-                    <div class="period">
-                        <strong><a href="https://www.facebook.com/DayDreams648">Day Dreams</a></strong>
-                        <time>October 2021 - 2024</time>
-                        <strong>Roles:</strong>
-                    </div>
-                    <p>
-                        <ul>
-                            <li><strong>Content Creator</strong>: I write <a href="https://www.facebook.com/photo/?fbid=838568271394174&set=a.551490096768661">trivias, theories and more</a>!</li>
-                            <li><strong>Translator</strong>: I mainly translate <a href="https://www.facebook.com/photo/?fbid=598744025376601&set=a.551490096768661">short comic strips</a>, <a href="https://www.facebook.com/DayDreams648/posts/pfbid02ZBkAMeBFkbmQ8w391h7q5c7W8BCwZKZYHKxMwV7idT1Bwq3cAsuS9pKu5N1bm1fql">stories</a>, and sometime <a href="https://www.facebook.com/photo/?fbid=1066376430652387&set=a.300901473866557">community posts</a> from a hobby of mine.</li>
+                            <li>Had some experiences with React, MongoDB and Shopify API integration.</li>
+                            <li>Built 2 Shopify apps from scratches: a QR Code Generator and an auction support app.</li>
+                            <li>Completed apps as final university project.</li>
                         </ul>
                     </p>
                 </summary>
+                <summary>
+                <h2>Languages</h2>
+                <div class="language">
+                    <strong>Vietnamese</strong>
+                    <span class="rating">
+                    <span class="rating-label">Native</span>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="language">
+                    <strong>English</strong>
+                    <span class="rating">
+                    <span class="rating-label">B1 (self-rated)</span>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="language">
+                    <strong>Japanese</strong>
+                    <span class="rating">
+                    <span class="rating-label">N4</span>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                </div>
+                </summary>
             </div>
         </section>
-        <section class="main-section">
+        <section class="side-section">
             <article>
-                <h2>
-                    About myself
-                </h2>
-                <p>
-                    One who craves for knowledge, but struggles with self-learning due to ADHD, but still try, slowly step-by-step.
-                </p>
+                <div style="text-align: center;">
+                    <img class="avatar" src="./assets/images/Avatar.png" />
+                </div>
             </article>
             <article>
                 <h2>
                     Skills
                 </h2>
-                <h3>Web Development</h4>
+                <p class="skills-list">HTML・CSS・JavaScript・React・MongoDB・Shopify・Photoshop</p>
+            </article>
+            <article>
+                <h2>
+                    Projects
+                </h2>
                 <ul>
-                    <li><b>Front-End</b></li>
-                    <ul>
-                        <li><b>HTML</b>: 3 / 5</li>
-                        <li><b>CSS</b>: 2 / 5</li>
-                        <li><b>JS/TS</b>: 2.5 / 5</li>
-                    </ul>
-                </ul>
-                <h3>Linguistic</h3>
-                <ul>
-                    <li><b>English</b>: I can do basic writing and reading. I want to learn English at more advanced level after graduation.</li>
-                    <li><b>Japanese</b>: I'm currently at N4. N3 is my next goal.</li>
-                </ul>
-                <h3>Miscellaneous</h3>
-                <ul>
-                    <li><b>Photoshop</b>: 2.5 / 5</li>
-                </ul>
-                <h3>Goals</h3>
-                <ul>
-                    <li>I'm currently learning Shopify for my uni final project.</li>
+                <li><strong>QR Code Generator Definitive & Ready Auction: <a href="https://truong-ai-hoc-ien-luc-kh-2v0oy1r.gamma.site/" target="_blank">Link</a></strong></li>
                 </ul>
             </article>
         </section>
     </div>
 </body>
-
 </html>
